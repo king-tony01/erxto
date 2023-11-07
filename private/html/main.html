@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css" />
+    <link rel="stylesheet" href="/private/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <title>Erxto | Home</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="tab active" data-tab="dashboard">
+            <i class="fas fa-briefcase"></i>Portfolio
+          </li>
+          <li class="tab" data-tab="market">
+            <i class="fas fa-arrow-trend-up"></i>Market
+          </li>
+          <li class="tab" data-tab="trade">
+            <i class="fas fa-dollar"></i>Trade
+          </li>
+        </ul>
+        <ul>
+          <li class="right-icon notice">
+            <i class="fas fa-bell"></i>
+            <div class="notice-counter">2</div>
+          </li>
+          <li class="right-icon"><i class="fas fa-user"></i></li>
+        </ul>
+      </nav>
+      <section class="notification">
+        <div class="notification-head">
+          <h3>Notifications</h3>
+          <i class="fas fa-close"></i>
+        </div>
+        <ul class="notification-con">
+          <li>
+            <i class="fas fa-arrow-trend-up"></i>
+            <div>
+              <b>New Exchange Rate!</b>
+              <div class="middle-divider">
+                <p>USD/NGN</p>
+                <small class="time">02:30 PM</small>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="modal"></section>
+    </header>
+    <main></main>
+    <script type="module" src="/private/js/app.js"></script>
+  </body>
+</html>

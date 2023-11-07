@@ -1,0 +1,32 @@
+{
+  "name": "erxto",
+  "version": "1.0.0",
+  "description": "Welcome to ERXTO®, your gateway to a revolutionary financial exchangesoftware designed to empower individuals, agencies, and companies in",
+  "default": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build":"parcel build server.js --dist-dir ./dist",
+    "dev":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/king-tony01/erxto.git"
+  },
+  "keywords": [
+    "Crypto",
+    "Arbitrage",
+    "Fiat"
+  ],
+  "author": "King Tony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/king-tony01/erxto/issues"
+  },
+  "homepage": "https://github.com/king-tony01/erxto#readme",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.2"
+  }
+}
