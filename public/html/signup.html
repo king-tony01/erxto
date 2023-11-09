@@ -24,23 +24,16 @@
             <button id="email-tab" class="tab active">Email</button>
             <button id="phone-tab" class="tab">Phone</button>
           </div>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="johndoe@example.com"
-            />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-phone"></i>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="+234 123 456 7890"
-            />
+          <div class="input-con">
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="johndoe@example.com"
+              />
+            </div>
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
@@ -54,7 +47,7 @@
           </div>
           <div class="agree-con">
             <div class="custom-check">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="agree" id="agree" />
               <span></span>
             </div>
             <p>
@@ -62,8 +55,11 @@
             </p>
           </div>
         </div>
-        <button id="signup" class="action-btn">Sign Up</button>
+        <button id="signup" class="action-btn not-allowed" disabled>
+          Sign Up
+        </button>
       </form>
     </main>
   </body>
+  <script type="module" src="/public/js/controller.js"></script>
 </html>

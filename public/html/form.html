@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css" />
+    <link rel="stylesheet" href="/public/css/login.css" />
+    <title>Erxto | Signup</title>
+  </head>
+  <body>
+    <main>
+      <div class="text">
+        <h1>ERXTO</h1>
+        <p>Revolutionizing Financial Exchange</p>
+      </div>
+      <form action="">
+        <div class="header">
+          <h2>Login</h2>
+          <a id="signup">I don't have an account</a>
+        </div>
+        <br />
+        <div class="tab-con">
+          <div class="tabs">
+            <button id="email-tab" class="tab active">Email</button>
+            <button id="phone-tab" class="tab">Phone</button>
+          </div>
+          <div class="input-con">
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="johndoe@example.com"
+              />
+            </div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Choose a strong password"
+            />
+            <i class="fas fa-eye-slash"></i>
+          </div>
+        </div>
+        <button id="login" class="action-btn">Login</button>
+      </form>
+    </main>
+  </body>
+  <script type="module" src="/public/js/controller.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const page = document.querySelector("main");
+      const tabs = document.querySelectorAll(".tab");
+      const inputCon = document.querySelector(".input-con");
+      const title = document.querySelector("title");
+      console.log(title.textContent);
+      page.innerHTML = `<div class="text">
+        <h1>ERXTO</h1>
+        <p>Revolutionizing Financial Exchange</p>
+      </div>
+      <form action="">
+        <div class="header">
+          <h2>Login</h2>
+          <a id="signup">I don't have an account</a>
+        </div>
+        <br />
+        <div class="tab-con">
+          <div class="tabs">
+            <button id="email-tab" class="tab active">Email</button>
+            <button id="phone-tab" class="tab">Phone</button>
+          </div>
+          <div class="input-con">
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="johndoe@example.com"
+              />
+            </div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Choose a strong password"
+            />
+            <i class="fas fa-eye-slash"></i>
+          </div>
+        </div>
+        <button id="login" class="action-btn">Login</button>
+      </form>`;
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+          e.preventDefault();
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+          console.log("clicked");
+          const tabClicked = tab.id;
+          switch (tabClicked) {
+            case "email-tab":
+              inputCon.innerHTML = `<div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="johndoe@example.com"
+            />
+          </div>`;
+              break;
+            case "phone-tab":
+              inputCon.innerHTML = `<div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="+234 123 456 7890"
+            />
+          </div>`;
+          }
+        });
+      });
+    });
+  </script>
+</html>

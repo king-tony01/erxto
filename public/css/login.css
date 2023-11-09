@@ -79,6 +79,7 @@ main form{
     margin-right: 10px;
     color: var(--secondary);
     font-size: 20px;
+    cursor: pointer;
 }
 
 .tabs .tab.active{
@@ -193,4 +194,32 @@ form .action-btn{
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+}
+
+form .action-btn.not-allowed{
+    background: #b4b4b4;
+    cursor: not-allowed;
+}
+
+form .not-allowed.active{
+    background: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .not-allowed .fas{
+    animation: rotate 1s linear forwards infinite;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }

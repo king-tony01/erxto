@@ -7,7 +7,7 @@ export function trade(data) {
         <section>
           <div class="wallet">
             <b>Balance</b>
-            <h1 class="balance">$ 40,000</h1>
+            <h1 class="balance">$ ${data.balance.toLocaleString("US")}</h1>
             <div class="action-btn">
               <button data-btn="fund" class="dashboard-btn"><i class="fas fa-arrow-down"></i> Fund</button
               ><button data-btn="withdraw" class="dashboard-btn"><i class="fas fa-arrow-up"></i> Withdraw</button

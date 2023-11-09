@@ -296,3 +296,13 @@ export function chart() {
     },
   });
 }
+
+/**
+ * This method fetches the user data from server and returns the data as `object`
+ * @returns {object}
+ */
+export async function getUser() {
+  const response = await fetch(`${location.origin}/user${location.search}`);
+  const user = await response.json();
+  return user;
+}
